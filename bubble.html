@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>My list</h1>
+        <ul id="myList">
+            <li id ="first" class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Ullam, sequi minus.</li>
+            <li class="item">Perferendis, maiores exercitationem.</li>
+            <li class="item">Facilis, animi dolorem.</li>
+            <li class="item">Veniam, suscipit delectus?</li>
+        </ul>
+        <button id="addNew">add  new item</button>
+    </div>
+<!-- bubble upor thake read kora suru kore nicher thake ta dakhano shuru kore -->
+    <script>
+        // document.getElementById('first').addEventListener('click',function () {
+        //     console.log('li click')
+        // });
+
+        // document.getElementById('container').addEventListener('click',function () {
+        //     console.log('container click');
+        // });
+
+        // document.getElementById('myList').addEventListener('click',function () {
+        //     console.log('ul click');
+        // });
+
+
+        // kono kisu  tar parent a use korle ta child a o add hoye jai ata e bubble
+        // kono event jodi jodi parent a add kora hoi tahole tar child add a o add hoye jai ta e bubble.
+        document.getElementById('myList').addEventListener('click',function (event) {
+            event.target.parentNode.removechild(event.target);
+        })
+
+            var item=document.getElementsByClassName('item');
+       for (var i = 0; i < item.length; i++) {
+           var items = item[i];
+           items.addEventListener('click',function (event) {
+            //   console.log(this,event.target.parentNode);
+            // console.log(event.target.innerText);
+            // event.target.parentNode.removechild(event.target); 
+            // li bad deyar jonno ata use kora hoi  
+        });
+       }
+
+       document.getElementById('addNew').addEventListener('click',function (event) {
+           var itemParent=document.getElementById('myList');
+           var newItem=document.createElement('li');
+           newItem.innerText='add brand new item';
+           itemParent.appendChild(newItem);           
+       })
+        
+
+
+
+    </script>
+</body>
+</html>

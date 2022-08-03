@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onclick="handleclick()" >events explore</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <button onclick="alert('hello')"> click me</button>
+    <button>click-1</button>
+    <button id="second">click-2</button>
+    <button id="last">click-3</button>
+
+    <script>
+            document.getElementById('last').addEventListener('click',function(){document.body.style.color='tomato';
+        })
+
+        // function handleclick(){
+        //     console.log('clicked me')
+        // }
+            // var secondButton=document.getElementById('second');
+            // secondButton.onclick=function(){
+            //     console.log('clicked me');
+            // }
+
+
+            //  function handleclick(){
+            //     document.body.style.backgroundColor='cyan';
+            //  }
+            // var  secondButton=document.getElementById('second');
+            //  secondButton.onclick=handleclick;
+
+                // var secondButton=document.getElementById('second');
+                // secondButton.addEventListener('click',handleclick);
+
+
+
+    </script>
+</body>
+</html>
